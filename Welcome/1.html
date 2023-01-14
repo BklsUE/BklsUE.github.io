@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <script>
+
+        // 获取当前日期
+
+        var today = new Date();
+
+        // 将日期转换为字符串格式
+
+        var todayStr = today.toDateString();
+
+        // 读取浏览器缓存中的登录日期
+
+        var loginDate = localStorage.getItem("loginDate");
+
+        // 如果缓存中没有登录日期，将当前日期写入缓存
+
+        if (!loginDate) {
+
+            localStorage.setItem("loginDate", todayStr);
+
+        }
+
+        // 如果缓存中有登录日期
+
+        else {
+
+            // 将缓存中的登录日期转换为日期格式
+
+            var loginDateObj = new Date(loginDate);
+
+            // 计算日期差，单位为毫秒
+
+            var diff = today - loginDateObj;
+
+            // 将日期差转换为天数
+
+            var diffInDays = diff / (1000 * 60 * 60 * 24);
+
+            // 在页面中显示登录天数
+
+            document.getElementById("loginDays").innerHTML = "今天是你来到本站的第 " + diffInDays + " 天";
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div id="loginDays"></div>
+
+</body>
+
+</html>
+
