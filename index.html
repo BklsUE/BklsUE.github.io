@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        if(localStorage.getItem("visited") == "true") {
+            window.location.href = "1.html";
+        } else {
+            localStorage.setItem("visited", "true");
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to my website!</h1>
+    <p>This is your first time visiting.</p>
+</body>
+</html>
