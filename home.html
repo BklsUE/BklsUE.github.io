@@ -55,8 +55,12 @@
 <!-- 开场特效 -->
 <iframe id="iframe" src="https://BklsUE.github.io/other/enter.html"></iframe>
     <script>
-        setTimeout(function() {
-            document.getElementById("iframe").style.opacity = "0";
+                setTimeout(function() {
+            var iframe = document.getElementById("iframe");
+            iframe.style.opacity = "0";
+            setTimeout(function() {
+                iframe.parentNode.removeChild(iframe);
+            }, 2000);
         }, 2000);
     </script>
 
