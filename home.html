@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* 页面背景 */
+        body {
+            background-color: black;
+        }
+        /* 白色导航栏 */
+        .navbar {
+            position: fixed;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        /* 按钮 */
+        .navbar button {
+            background-color: white;
+            border: none;
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 0;
+            cursor: pointer;
+        }
+        /* 鼠标悬停按钮 */
+        .navbar button:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <button>选项1</button>
+        <button>选项2</button>
+        <button>选项3</button>
+    </div>
+</body>
+</html>
