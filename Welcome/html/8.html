@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: black;
+      }
+      
+      .grid {
+        width: 40px;
+        height: 40px;
+        float: left;
+      }
+    </style>
+    <script>
+      function randomGrid() {
+        var grids = document.getElementsByClassName("grid");
+        var randomIndex = Math.floor(Math.random() * grids.length);
+        grids[randomIndex].style.backgroundColor = "white";
+        setTimeout(function() {
+          grids[randomIndex].style.backgroundColor = "black";
+        }, 100);
+      }
+      setInterval(randomGrid, 200);
+    </script>
+  </head>
+  <body>
+    <div id="grid-container">
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <div class="grid"></div>
+      <!-- add more divs with the class "grid" for more grids -->
+    </div>
+  </body>
+</html>
