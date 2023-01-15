@@ -51,6 +51,15 @@
     </style>
 </head>
 <body>
+<!-- 开场特效 -->
+<iframe id="iframe" src="/other/enter.html"></iframe>
+    <script>
+        setTimeout(function() {
+            document.getElementById("iframe").style.opacity = "0";
+        }, 2000);
+    </script>
+
+    <!-- 页面其它内容 -->
     <div class="navbar">
         <button>文库</button>
         <button>收录</button>
