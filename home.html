@@ -82,7 +82,7 @@
    
     
 	    <!-- 收录 -->
-<div style="width:100%;height:100%;" align="center">
+<div style="width:100%;height:100%;" align="center" id="includediv">
   <iframe id="include" style="width:90%;height:90%;" align="center" src="https://bklsue.github.io/Inclusion/1.html"></iframe>
   <script>
         function changeLink() {
@@ -111,8 +111,8 @@
     <!-- 页面其它内容 -->
     <div class="navbar">
         <button>文库</button>
-        <button>收录</button>
-        <button>首页</button>
+        <button onclick="location='#includediv'">收录</button>
+        <button onclick="location='#placeholder'">首页</button>
         <button>工具</button>
         <button>关于</button>
     </div>
