@@ -77,5 +77,18 @@
         <button>工具</button>
         <button>关于</button>
     </div>
+    
+    <!-- 一些小组件 -->
+    <p style="text-align:center;padding-top:5px;color: white">今天是BklsUE.github.io运行的第<span id="days" style="color:white">0</span>天,
+</p>
+<script>
+	var s1 = '2023-01-14';
+	s1 = new Date(s1.replace(/-/g, "/"));
+	s2 = new Date();
+	var days = s2.getTime() - s1.getTime();
+	var number_of_days = parseInt(days / (1000 * 60 * 60 * 24));
+	document.getElementById('days').innerHTML = number_of_days;
+</script>
+    
 </body>
 </html>
