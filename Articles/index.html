@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <style>
+      /* 样式可以根据需要调整 */
+      table {
+        width: 300px;
+        border-collapse: collapse;
+      }
+      th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+      }
+      /* 文件夹图标 */
+      .folder {
+        background-image: url(folder.png);
+        background-repeat: no-repeat;
+        padding-left: 20px;
+      }
+      /* 展开的文件夹 */
+      .open {
+        background-color: #f2f2f2;
+      }
+    </style>
+    <script>
+      function toggleFolder(el) {
+        // 找到相邻的行并修改样式
+        var rows = el.parentNode.parentNode.nextSibling;
+        while (rows && rows.tagName !== "TR") {
+          rows = rows.nextSibling;
+        }
+        while (rows) {
+          if (rows.classList.contains("folder-contents")) {
+            rows.classList.toggle("open");
+          }
+          rows = rows.nextSibling;
+        }
+      }
+      function goToLink(el) {
+        // 获取链接并跳转
+        var link = el.getAttribute("data-link");
+        window.location.href = link;
+      }
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td class="folder" onclick="toggleFolder(this)">文件夹1</td>
+      </tr>
+      <tr class="folder-contents">
+        <td onclick="goToLink(this)" data-link="https://file1.com">文件1</td>
+      </tr>
+      <tr class="folder-contents">
+        <td onclick="goToLink(this)" data-link="https://file2.com">文件2</td>
+      </tr>
+      <tr>
+        <td class="folder" onclick="toggleFolder(this)">文件夹2</td>
+      </tr>
+      <tr class="folder-contents">
+        <td onclick="goToLink(this)" data-link="https://file3.com">文件3</td>
+      </tr>
+    </table>
+  </body>
+</html>
