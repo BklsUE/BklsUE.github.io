@@ -44,30 +44,39 @@
       
       
       
-      
-    /* 一下内容可以pull */
-      <tr>
-        <td class="folder" onclick="toggleFolder(this)">文件夹1</td>
-      </tr>
-      <tr class="folder-contents">
-        <td onclick="goToLink(this)" data-link="https://file1.com">文件1</td>
-      </tr>
-      <tr class="folder-contents">
-        <td onclick="goToLink(this)" data-link="https://file2.com">文件2</td>
-      </tr>
-      <tr>
-        <td class="folder" onclick="toggleFolder(this)">文件夹2</td>
-      </tr>
-      <tr class="folder-contents">
-        <td onclick="goToLink(this)" data-link="https://file3.com">文件3</td>
-      </tr>
-    /* 以上内容可以pull */
-      
-      
-      
-      
-      
-      
-    </table>
+
+  <tr>
+    <td class="folder" onclick="toggleFiles(this)">Folder 1</td>
+    <td class="file"><a href="link1.html">File 1</a></td>
+  </tr>
+  <tr class="files" style="display:none;">
+    <td class="file"><a href="link2.html">File 2</a></td>
+    <td class="file"><a href="link3.html">File 3</a></td>
+  </tr>
+  <tr>
+    <td class="folder" onclick="toggleFiles(this)">Folder 2</td>
+    <td class="file"><a href="link4.html">File 4</a></td>
+  </tr>
+  <tr class="files" style="display:none;">
+    <td class="file"><a href="link5.html">File 5</a></td>
+    <td class="file"><a href="link6.html">File 6</a></td>
+  </tr>
+</table>
+    
+    
+    
+    
+    
+    
+<script>
+function toggleFiles(folder) {
+  var files = folder.parentNode.nextElementSibling;
+  if (files.style.display === "none") {
+    files.style.display = "table-row";
+  } else {
+    files.style.display = "none";
+  }
+}
+</script>
   </body>
 </html>
