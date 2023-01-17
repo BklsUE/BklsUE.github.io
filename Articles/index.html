@@ -23,26 +23,8 @@
         background-color: #f2f2f2;
       }
     </style>
-    <script>
-      function toggleFolder(el) {
-        var rows = el.parentNode.parentNode.nextSibling;
-        while (rows && rows.tagName !== "TR") {
-          rows = rows.nextSibling;
-        }
-        while (rows) {
-          if (rows.classList.contains("folder-contents")) {
-            rows.classList.toggle("open");
-          }
-          rows = rows.nextSibling;
-        }
-      }
-      function goToLink(el) {
-        var link = el.getAttribute("data-link");
-        window.location.href = link;
-      }
-    </script>
   </head>
-  <body>
+  <body bgcolor=black>
     <table>
       
       
@@ -53,20 +35,20 @@
       
 
   <tr>
-    <td class="folder" onclick="toggleFiles(this)">Folder 1</td>
+    <td>Folder 1</td>
   </tr>
-  <tr class="files" style="display:none;">
+  <tr style="display:none;">
     
-    <tr class="file">
-    <td class="file"><a href="link2.html">File 1</a></td>
+    <tr>
+    <td><a href="link2.html">File 1</a></td>
     </tr>
       
-    <tr class="file">
-    <td class="file"><a href="link3.html">File 2</a></td>
+    <tr>
+    <td><a href="link3.html">File 2</a></td>
     </tr>
       
-    <tr class="file">
-    <td class="file"><a href="link3.html">File 3</a></td>
+    <tr>
+    <td><a href="link3.html">File 3</a></td>
     </tr>
       
   </tr>
@@ -75,20 +57,20 @@
      
       
   <tr>
-    <td class="folder" onclick="toggleFiles(this)">Folder 2</td>
+    <td>Folder 2</td>
   </tr>
-  <tr class="files" style="display:none;">
+  <tr style="display:none;">
     
-    <tr class="file">
-    <td class="file"><a href="link4.html">File 4</a></td>
+    <tr>
+    <td><a href="link4.html">File 4</a></td>
     </tr>
     
-    <tr class="file">
-    <td class="file"><a href="link6.html">File 5</a></td>
+    <tr>
+    <td><a href="link6.html">File 5</a></td>
     </tr>
     
-    <tr class="file">
-    <td class="file"><a href="link6.html">File 6</a></td>
+    <tr>
+    <td><a href="link6.html">File 6</a></td>
     </tr>
       
   </tr>
@@ -100,16 +82,5 @@
     
     
     
-    
-<script>
-function toggleFiles(folder) {
-  var files = folder.parentNode.nextElementSibling;
-  if (files.style.display === "none") {
-    files.style.display = "table-row";
-  } else {
-    files.style.display = "none";
-  }
-}
-</script>
   </body>
 </html>
